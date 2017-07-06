@@ -1,0 +1,862 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Windows 10</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <audio autoplay="autoplay">
+        <source src="windows start.mp3" type="audio/mpeg">
+    </audio>
+    <link rel="stylesheet" href="css/dzy_suoping.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/des.css">
+    <script src="js/common.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <!--高九栋js引用-->
+    <link rel="stylesheet" type="text/css" href="images/fonticon/iconfont.css">
+    <link rel="stylesheet" href="css/gjd_css.css">
+    <!--王卫昆引用-->
+    <link rel="stylesheet" href="base/index.css">
+    <!--小雪引用-->
+    <link rel="stylesheet" href="css/recycle-bin.css">
+
+    <!-- 朱涛引用开始-->
+    <link rel="stylesheet" href="css/commonZT.css">
+    <link rel="stylesheet" href="css/zhuTao.css">
+    <script src="js/commonZT.js"></script>
+    <script src="js/zhutao.js"></script>
+    <!---朱涛引用开始-->
+
+
+
+    <!--魏泽引用-->
+    <link rel="stylesheet" href="WZ_CSS/WZ_main.css">
+    <link rel="stylesheet" type="text/css" href="WZ_iconfont/iconfont.css">
+    <!--王超计算器样式引用-->
+    <link rel="stylesheet" href="css/calc.css">
+    <!--王超有道词典样式引用-->
+    <link rel="stylesheet" type="text/css" href="ydiconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="images/fonticon/iconfont.css">
+    <link rel="stylesheet" href="css/youdao.css">
+    <!--王超右键菜单样式引用-->
+    <!--宁振宇，新建图标功能添加-->
+    <link rel="stylesheet" href="css/rightclick.css">
+    <!--王超放烟花样式引用-->
+    <link rel="stylesheet" href="css/yanhua.css">
+</head>
+
+<body>
+
+
+    <!--默认开机密码123456-->
+    <!---------------若想跳过桌面部分请将以下代码注释！！并在<div id="destop">  中添加属性  style = "display:block"-------------------------------->
+    <!--dzy：锁屏+密码输入+切换-->
+    <div id="dzy_suoping_total" class="clearfix">
+        <div id="dzy_suoping_time" class="clearfix">
+            <div id="dzy_suoping_clock">13:02</div>
+            <div id="dzy_suoping_date">11月28日,星期二</div>
+        </div>
+    </div>
+    <!--背景界面+时间-->
+    <div id="dzy_suoping_icon">
+        <img src="images/dzy_images/imageres.dll(6024).ico" alt="">
+        <img src="images/dzy_images/imageres.dll(6203).ico" alt="">
+    </div>
+    <!--右下角小图标-->
+    <div id="dzy_suoping_passwordArea" class="clearfix">
+        <img src="images/dzy_images/touxiang.jpg" alt="" class="dzy_touxiang">
+        <div class="dzy_user_name">Severus Snape</div>
+        <input type="password" class="dzy_pw" id="dzy_pw" placeholder="PIN">
+        <img src="images/dzy_images/loading.gif" alt="" id="dzy_loading">
+    </div>
+    <!--密码输入框-->
+    <script>
+        var dzy_time = document.getElementById("dzy_suoping_clock");
+        var dzt_date = document.getElementById("dzy_suoping_date");
+        var dzy_icon = document.getElementById("dzy_suoping_icon");
+        var dzy_timeTotal = document.getElementById("dzy_suoping_time");
+        var dzy_pwArea = document.getElementById("dzy_suoping_passwordArea");
+        var dzy_flag = 1;
+        var date = new Date();
+        var week;
+        switch (date.getDay()) {
+            case 0:
+                week = "日";
+                break;
+            case 1:
+                week = "一";
+                break;
+            case 2:
+                week = "二";
+                break;
+            case 3:
+                week = "三";
+                break;
+            case 4:
+                week = "四";
+                break;
+            case 5:
+                week = "五";
+                break;
+            case 6:
+                week = "六";
+                break;
+        }
+        var dzy_hour, dzy_minite;
+        dzy_hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+        dzy_minite = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        dzy_time.innerText = dzy_hour + ":" + dzy_minite;
+        dzt_date.innerText = (date.getMonth() + 1) + "月" + date.getDate() + "日,星期" + week;
+        var timer = setInterval(function () {
+            var date = new Date();
+            var week;
+            switch (date.getDay()) {
+                case 0:
+                    week = "日";
+                    break;
+                case 1:
+                    week = "一";
+                    break;
+                case 2:
+                    week = "二";
+                    break;
+                case 3:
+                    week = "三";
+                    break;
+                case 4:
+                    week = "四";
+                    break;
+                case 5:
+                    week = "五";
+                    break;
+                case 6:
+                    week = "六";
+                    break;
+            }
+            var dzy_hour, dzy_minite;
+            dzy_hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+            dzy_minite = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+            dzy_time.innerText = dzy_hour + ":" + dzy_minite;
+            dzt_date.innerText = (date.getMonth() + 1) + "月" + date.getDate() + "日,星期" + week;
+
+        }, 1000);
+        var dzy_total = document.getElementById("dzy_suoping_total");
+        dzy_total.onclick = function () {
+            if (dzy_flag == 1) {
+                animate(this, { opacity: 0.5 });
+                animate(dzy_timeTotal, { opacity: 0, top: 400 }, function () {
+                    dzy_timeTotal.remove()
+                });
+                //            animate(dzy_icon, {opacity: 0}, function () {
+                //                dzy_icon.remove()
+                //            });
+                dzy_pwArea.style.display = "block";
+                dzy_pwArea.style.opacity = 0;
+                animate(dzy_pwArea, { opacity: 1 });
+                dzy_flag = 0;
+            }
+        }
+    </script>
+    <!--dzy：控制时间-->
+    <!---------------若想跳过桌面部分请将以上代码注释！！并在<div id="destop">  中添加属性  style = "display:block"-------------------------------->
+    <!--（记得添加属性！！！！否则桌面无法显示！！！！并忽略由此产生的报错-->
+    <!-----------------------------------------------桌面部分---------------------------------------------------------------->
+    <div id="destop">
+        <!--完整的桌面大盒子-->
+        <!--桌面图标及具体内容-->
+        <div id="desArea">
+            <div id="des_icon"></div>
+            <!--图标，由JS动态创建ul和li-->
+        </div>
+        <!--桌面图标部分-->
+        <!-----------------------------魏泽记事本标签创建所在盒子-------------------------------->
+        <div class="WZ_JSBbox"></div>
+        <!-------------------------------------回收站开始-------------------------------------------->
+        <div id="xx_recycle">
+            <div id="xx_box">&nbsp;&nbsp;</div>
+            <div id="xx_content">
+                <ul id="xx_list"></ul>
+            </div>
+        </div>
+        <!-------------------------------------回收站结束-------------------------------------------->
+        <!----------------------------------------高九栋任务栏开始---------------------------------->
+        <div id="missionArea">
+            <div id="gjd_box">
+                <span id="gjd_sp" class="iconfont icon-win">
+                    <div id="gjd_menu">
+                        <div id="gjd_menu_l">
+                            <i id="i_0" class="iconfont icon-menu"></i>
+                            <div id="gjd_menu_l_b">
+                                <i id="i_1" class="iconfont icon-shezhi"></i>
+                                <i id="i_2" class="iconfont icon-wenjianjiafolder170"></i>
+                                <i id="i_3" class="iconfont icon-jieshu"></i>
+                            </div>
+                        </div>
+                        <div id="gjd_menu_m">
+                            <dl>
+                                <dt>最近添加</dt>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dt>最近添加</dt>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                                <dd class="d_1"><img src="images/Facebook-Icon.png" alt=""><span class="dsp">脸书Facebook</span></dd>
+                            </dl>
+                        </div>
+                        <div id="gjd_menu_r">
+                            <h5>生活动态</h5>
+                            <div id="gjd_pububox"></div>
+                        </div>
+                    </div>
+                </span>
+                <div id="gjdipt">
+                    <ul id="gjd_Ul">
+                        <li><input type="text" id="gjdipt_t" placeholder="在这里输入你要搜索的内容"></li>
+                        <li><i id="gjdipt_i" class="iconfont icon-microphonehuatong"></i></li>
+                        <li><i id="gjde" class="iconfont icon-e"></i></li>
+                    </ul>
+                </div>
+                <div id="gjd_toolbar">
+                    <ul>
+                        <li></li>
+                        <li id="gjdjt" class="iconfont icon-xiangshang">
+                            <div id="gjdjt_s">
+                                <i id="gjdjt_s_i0" class="iconfont icon-wangluo-copy"></i>
+                            </div>
+                        </li>
+                        <li id="gjdcd" class="iconfont icon-iconset0247"></li>
+                        <li id="gjdyl" class="iconfont icon-yl"></li>
+                        <li id="gjdwang" class="iconfont icon-pcmoshi"></li>
+                        <li id="gjdzhong" class="iconfont icon-zhong"></li>
+                        <li></li>
+                        <li id="gjdtime">
+                        </li>
+                        <li id="gjd_messageli" class="iconfont icon-tongzhi">
+                            <div id="gjd_czmiddle">
+                                <h5>操作中心</h5>
+                                <div id="gjd_czmiddle_b">
+                                    <div class="czmbox iconfont icon-pcmoshi">
+                                        <span>平板模式</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-wangluo-copy">
+                                        <span>网络</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-shezhi">
+                                        <span>所有设置</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-xiaozhushoubianqian">
+                                        <span>便签</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-feihangfangshimoshi">
+                                        <span>飞行模式</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-dingwei">
+                                        <span>定位</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-tubiaoyueliang">
+                                        <span>免打扰时间</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-liangdu">
+                                        <span>50%</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-vpn">
+                                        <span>VPN</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-jienengmoshi">
+                                        <span>节电模式</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-touyingyi">
+                                        <span>投影</span>
+                                    </div>
+                                    <div class="czmbox iconfont icon-lianjie">
+                                        <span>连接</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <!-----------------------任务栏——高九栋模块结束-------------------------------------------->
+    </div>
+    <!--王卫昆-->
+        <div class="shezhi" id="shezhi">
+            <div class="shezhi_t">
+                <span class="biao1">设置</span>
+                <span class="biao2 fr" id="guanbi">×</span>
+            </div>
+            <div class="shezhi_l">
+                <ul>
+                    <li id="zy">主页</li>
+                    <li id="bj">背景</li>
+                    <li id="sp">锁屏</li>
+                    <li id="zx">注销</li>
+                    <li id="ks">开始菜单</li>
+                </ul>
+            </div>
+            <div class="shezhi_r" id="bjt">
+                <div class="shezhi_r_t"><span>浏览：</span><img id="dxtp" src="wwk_img/img1.jpg" alt="" width="430"></div>
+                <div class="shezhi_r_d">
+                    <ul id="xtp">
+                        <li> <img src="wwk_img/img1.jpg" alt="" width="100"></li>
+                        <li> <img src="wwk_img/img2.jpg" alt="" width="100"></li>
+                        <li> <img src="wwk_img/img3.jpg" alt="" width="100"></li>
+                        <li> <img src="wwk_img/img4.jpg" alt="" width="100"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shezhi_r" id="suoping">
+                <div class="shezhi_r_t"><span>浏览：</span><img id="dxtp2" src="wwk_img/img5.jpg" alt="" width="430"></div>
+                <div class="shezhi_r_d">
+                    <ul id="xtp2">
+                        <li> <img src="wwk_img/img5.jpg" alt="" width="100"></li>
+                        <li> <img src="wwk_img/img12.jpg" alt="" width="100"></li>
+                        <li> <img src="wwk_img/img13.jpg" alt="" width="100"></li>
+                        <li> <img src="wwk_img/img14.jpg" alt="" width="100"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="zhuye" id="zhuye">
+            <div class="shezhi_t">
+                <span class="biao3" id="fanhui">←</span>
+                <span class="biao4 fr" id="guanbi1">×</span>
+            </div>
+            <span class="zhuye_m">Windows 设置</span>
+            <div>
+                <input type="text" placeholder="查找设置">
+            </div>
+            <div class="zhuye_d">
+                <ul>
+                    <li><img src="wwk_img/zhuye1.png" alt="" class="fl" width="160px"></li>
+                    <li><img src="wwk_img/zhuye2.png" alt="" class="fl" width="160px"></li>
+                    <li><img src="wwk_img/zhuye3.png" alt="" class="fl" width="160px"></li>
+                    <li><img src="wwk_img/zhuye4.png" alt="" class="fl" width="160px"></li>
+                    <li><img src="wwk_img/zhuye5.png" alt="" class="fl" width="160px"></li>
+                    <li><img src="wwk_img/zhuye6.png" alt="" class="fl" width="160px"></li>
+                    <li><img src="wwk_img/zhuye7.png" alt="" class="fl" width="160px"></li>
+                    <li><img src="wwk_img/zhuye8.png" alt="" class="fl" width="160px"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="zhuxiao" id="zhuxiao">
+            <div class="zhuxiao_t"><span class="zhuxiao_t_t">关闭Windows</span></div>
+            <div class="zhuxiao_m"><img src="wwk_img/zhuxiao.gif" alt=""></div>
+            <input type="button" value="是否需要注销">
+            <div class="zhuxiao_m2"><span>请关闭所有应用</span></div>
+            <div class="zhuxiao_d">
+                <ul>
+                    <li><button id="btn7">确定</button></li>
+                    <li><button id="btn8">取消</button></li>
+                </ul>
+            </div>
+        </div>
+    <!--王卫昆结束-->
+
+    <!--朱涛qqHTML开始-->
+        <div id="login-zt">
+            <div id="login-zt-up">
+                <div class="close-zt">
+                    <i class="iconfont icon-shanchu"></i>
+                </div>
+                <div class="min-zt">
+                    <i class="iconfont icon-zuixiaohua2"></i>
+                </div>
+            </div>
+            <div id="login-zt-down">
+                <div class="portrait-zt"></div>
+                <input type="text" id="login-username-zt" value="2412586330">
+                <input type="password" id="login-password-zt">
+                <a href="https://ssl.zc.qq.com/chs/index.html?from=client&pt_clientver=5521&pt_src=1&ptlang=2052&regkey=FD41AA1ED71717A5A7CADDA1B323D89C3D95667B5AEA2EE4B0FFABBF96D35239&ADUIN=0&ADSESSION=0&ADTAG=CLIENT.QQ.5521_NewAccount_Btn.0&ADPUBNO=26675" target=_blank id="login-register-zt">注册账号</a>
+                <a href="https://aq.qq.com/v2/uv_aq/html/reset_pwd/pc_reset_pwd_input_account.html?v=4.0&old_ver_account=2412586330" target=_blank id="login-forget-zt">忘记密码</a>
+                <div id="login-decision-zt">
+                    <div id="right-zt">输入正确</div>
+                    <div id="wrong-zt">用户名或密码错误</div>
+                </div>
+                <input type="button" value="登 录" id="login-bar-zt">
+            </div>
+        </div>
+        <div id="mainWindow-zt">
+            <div id="mainWindow-zt-top">
+                <div class="close-zt">
+                    <i class="iconfont icon-shanchu"></i>
+                </div>
+                <div class="min-zt">
+                    <i class="iconfont icon-zuixiaohua2"></i>
+                </div>
+                <div class="portrait-zt"></div>
+                <div id="mainWindow-zt-top-name">阿汤哥</div>
+                <div id="mainWindow-zt-top-signature">青春呼啸而过 , 你却沉默不语 .</div>
+                <div id="mainWindow-zt-top-qzone">
+                    <ul>
+                        <li>
+                            <i class="iconfont icon-share_qzone"></i>
+                        </li>
+                        <li>
+                            <i class="iconfont icon-mail"></i>
+                        </li>
+                        <li id="txn">
+                            <i class="iconfont icon-tengxunxinwen"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div id="mainWindow-zt-top-search">搜索</div>-->
+            </div>
+            <div id="mainWindow-zt-middle">
+                <div id="mainWindow-zt-middle-tagBar">
+                    <ul>
+                        <li class="chosen">
+                            <i class="iconfont icon-lianxiren-copy"></i>
+                        </li>
+                        <li>
+                            <i class="iconfont icon-lianxiren11"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div id="mainWindow-zt-middle-list">
+                    <ul class="friends">
+                        <li>
+                            <div class="mainWindow-zt-middle-list-block-portrait"></div>
+                            <div class="mainWindow-zt-middle-list-block-name">Aragorn</div>
+                            <div class="mainWindow-zt-middle-list-block-message">读书或旅行 , 身体和心灵总有一个在路上 .</div>
+                        </li>
+                        <li>
+                            <div class="mainWindow-zt-middle-list-block-portrait4"></div>
+                            <div class="mainWindow-zt-middle-list-block-name">小鲁班</div>
+                            <div class="mainWindow-zt-middle-list-block-message">有人需要技术支持吗 ?</div>
+                        </li>
+                        </li>
+                        <li>
+                            <div class="mainWindow-zt-middle-list-block-portrait2"></div>
+                            <div class="mainWindow-zt-middle-list-block-name">Tony</div>
+                            <div class="mainWindow-zt-middle-list-block-message">I am Iron man.</div>
+                        </li>
+                        <li>
+                            <div class="mainWindow-zt-middle-list-block-portrait3"></div>
+                            <div class="mainWindow-zt-middle-list-block-name">QQ</div>
+                            <div class="mainWindow-zt-middle-list-block-message">吃饭 , 睡觉 , 打豆豆 .</div>
+                        </li>
+                        </li>
+                        <li>
+                            <div class="mainWindow-zt-middle-list-block-portrait5"></div>
+                            <div class="mainWindow-zt-middle-list-block-name">Wolverine</div>
+                            <div class="mainWindow-zt-middle-list-block-message">Kill them all !</div>
+                        </li>
+                        </li>
+
+                    </ul>
+                    <ul class="group">
+                        <li>
+                            <div class="mainWindow-zt-middle-list-block-group-portrait"></div>
+                            <div class="mainWindow-zt-middle-list-block-group-name">Viggo Mortensen fans group</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mainWindow-zt-bottom">
+                <div class="set">
+                    <i class="iconfont icon-menu"></i>
+                </div>
+                <div class="add">
+                    <i class="iconfont icon-tianjia1"></i>
+                </div>
+            </div>
+        </div>
+        <div id="chatWindow-zt">
+            <div id="chatWindow-zt-top">
+                <div class="close-zt">
+                    <i class="iconfont icon-shanchu"></i>
+                </div>
+                <div class="min-zt">
+                    <i class="iconfont icon-zuixiaohua2"></i>
+                </div>
+                <div id="chatWindowPortrait-zt"></div>
+                <div id="chatWindowFriendName-zt">Aragorn</div>
+                <div id="chatWindowFriendSignature-zt">读书或旅行 , 身体和心灵总有一个在路上 .</div>
+
+            </div>
+            <div id="chatWindow-zt-middle"></div>
+            <div id="chatWindow-zt-bottom">
+                <!--<img src="images/对话窗口底部功能栏.bmp" alt="">-->
+                <textarea name="" id="" cols="" rows=""></textarea>
+                <input type="button" value="发 送">
+            </div>
+        </div>
+    <!--朱涛qqHTML结束-->
+
+    <!--腾讯新闻 开始-->
+        <div class="wrapper" id="txnews">
+            <span id="txclosed"></span>
+            <div id="newshead"><img src="imgs/标头.jpg" alt="" width="746px"></div>
+            <ul class="tab">
+                <!--顶部操作的按钮-->
+                <li class="tab-item active">新闻<span>◆</span></li>
+                <li class="tab-item">财经<span>◆</span></li>
+                <li class="tab-item">视频<span>◆</span></li>
+                <li class="tab-item">娱乐<span>◆</span></li>
+                <li class="tab-item">房产<span>◆</span></li>
+                <li class="tab-item">汽车<span>◆</span></li>
+                <li class="tab-item">游戏<span>◆</span></li>
+                <li class="tab-item">体育<span>◆</span></li>
+                <li class="tab-item">时尚<span>◆</span></li>
+                <li class="tab-item">NBA<span>◆</span></li>
+                <li class="tab-item">社会<span>◆</span></li>
+                <li class="tab-item">大燕网</li>
+            </ul>
+            <div class="products">
+                <!--下部对应显示的内容-->
+                <div class="main selected">
+                    <a href="###"><img src="imgs/新闻.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/财经.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/视频.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/娱乐.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/房产.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/汽车.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/游戏.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/体育.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/时尚.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/NBA.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/社会.jpg" alt="" width="742px" /></a>
+                </div>
+                <div class="main">
+                    <a href="###"><img src="imgs/大燕网.jpg" alt="" width="742px" /></a>
+                </div>
+            </div>
+        </div>
+    <!--腾讯新闻 结束-->
+
+    <!--计算器html部分开始---王超-->
+        <div id="calculator">
+            <div id="rt"><span>-</span>&nbsp;&nbsp;<span>×</span></div>
+            <div id="calcu-head">
+                <h6>简单的计算器</h6>
+            </div>
+            <form name="calculator" action="" method="get">
+                <div id="calcu-screen">
+                    <!--配置显示窗口，使用onfocus="this.blur();"避免键盘输入-->
+                    <input type="text" name="numScreen" class="screen" value="0" onfocus="this.blur();" />
+                </div>
+                <div id="calcu-btn">
+                    <ul>
+                        <!--配置按钮-->
+                        <li onclick="command(7)">7</li>
+                        <li onclick="command(8)">8</li>
+                        <li onclick="command(9)">9</li>
+                        <li class="tool" onclick="del()">←</li>
+                        <li class="tool" onclick="clearscreen()">C</li>
+                        <li onclick="command(4)">4</li>
+                        <li onclick="command(5)">5</li>
+                        <li onclick="command(6)">6</li>
+                        <li class="tool" onclick="times()">×</li>
+                        <li class="tool" onclick="divide()">÷</li>
+                        <li onclick="command(1)">1</li>
+                        <li onclick="command(2)">2</li>
+                        <li onclick="command(3)">3</li>
+                        <li class="tool" onclick="plus()">+</li>
+                        <li class="tool" onclick="minus()">-</li>
+                        <li onclick="command(0)">0</li>
+                        <li onclick="dzero()">00</li>
+                        <li onclick="dot()">.</li>
+                        <li class="tool" onclick="persent()">%</li>
+                        <li class="tool" onclick="equal()">=</li>
+                    </ul>
+                </div>
+                <div id="calcu-foot">
+                    <span id="note"></span>
+                    <span class="welcome">欢迎使用javascript计算器！</span>
+                </div>
+            </form>
+        </div>
+    <!--计算器html部分结束---王超-->
+
+    <!--有道词典html部分开始---王超-->
+        <div id="youdao">
+            <div class="ydhead" id="ydhead">
+                <img src="ydlogo.bmp" alt="">
+                <span>&lt;&nbsp;&nbsp;</span>
+                <span>&gt;</span>
+                <input type="text" placeholder="请输入内容">
+                <span class="icof"><i class="iconfont icon-sousuo"></i></span>
+                <span class="lishijilu"><i class="iconfont icon-lishijilu"></i></span>
+                <ul class="ydrt">
+                    <li>-</li>
+                    <li>□</li>
+                    <li>×</li>
+                </ul>
+            </div>
+            <div class="ydleft">
+                <ul class="ydleftul ">
+                    <li><i class="iconfont icon-chakan">&nbsp;</i>查询</li>
+                    <li><i class="iconfont icon-yijianfankui">&nbsp;</i>翻译</li>
+                    <li><i class="iconfont icon-caidan">&nbsp;</i>例句</li>
+                    <li><i class="iconfont icon-wangluo">&nbsp;</i>百科</li>
+                </ul>
+                <div class="ydfengexian"></div>
+                <ul class="ydleftul">
+                    <li><i class="iconfont icon-wodedingdan">&nbsp;</i>单词本</li>
+                    <li><i class="iconfont icon-xiaoxizhongxin">&nbsp;</i>人工翻译</li>
+                    <li><i class="iconfont icon-shezhi">&nbsp;</i>设置</li>
+                    <li><i class="iconfont icon-jushoucang">&nbsp;</i>满意度</li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox" name="">取词</li>
+                    <li><input type="checkbox" name="">划词</li>
+                </ul>
+            </div>
+            <div class="ydright">
+                <!--有道词典轮播图-->
+                <div class="slider">
+                    <ul class="ydpic">
+                        <li>
+                            <img src="images/yd1.jpeg" alt="">
+                            <span>
+                            <p class="eng">where my heart get peace,where my self get home.</p>
+                            <p class="chs">吾心归处即吾乡。</p>
+                        </span>
+                        </li>
+                        <li><img src="images/yd2.jpeg" alt="">
+                            <span>
+                            <p class="eng">Morning hours is the best time of the day to work.</p>
+                            <p class="chs">一日之计在于晨。</p>
+                        </span>
+                        </li>
+                        <li><img src="images/yd3.jpeg" alt="">
+                            <span>
+                            <p class="eng">How does the world look through your eyes？</p>
+                            <p class="chs">你看到的世界是怎样的呢？</p>
+                        </span>
+                        </li>
+                        <li><img src="images/yd4.jpeg" alt="">
+                            <span>
+                            <p class="eng">The morning crowned the humble mountain with splendor. </p>
+                            <p class="chs">晨光为谦逊的山峰披上壮丽的色彩。</p>
+                        </span>
+                        </li>
+                        <li><img src="images/yd5.jpeg" alt="">
+                            <span>
+                            <p class="eng">All the treasures of the earth would not bring back one lost moment. </p>
+                            <p class="chs">机会失去不再来，千贯万贯难赎回。</p>
+                        </span>
+                        </li>
+                    </ul>
+                    <ul class="yuandian">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <!--箭头-->
+                    <div class="arrow">
+                        <span class="arrow-left">&lt;</span>
+                        <span class="arrow-right">&gt;</span>
+                    </div>
+                </div>
+                <ul class="ydlist">
+                    <li>
+                        <img src="images/ydlist1.jpeg" height="75px" width="100px" alt="">
+                        <span>
+                        <a href="#">背单词，我走过的弯路</a><br /><br />
+                        <p>全奖新闻系硕士，主要研究英语听说、任务型课堂、高级语...</p>
+                    </span>
+                    </li>
+                    <li>
+                        <img src="images/ydlist2.png" height="75px" width="100px" alt="">
+                        <span>
+                        <a href="#">When I'm free 和 If I'm free ，意思居然差了十条街！</a><br /><br />
+                        <p>比如哪天一个外国人要你做什么事，你回答，"I'll take c...</p>
+                    </span>
+                    </li>
+                    <li>
+                        <img src="images/ydlist3.jpeg" height="75px" width="100px" alt="">
+                        <span>
+                        <a href="#">还在纠结口红色号？或许你该试试吊炸天的大理石唇色！</a><br /><br />
+                        <p>Suuz Brouwer是国外网络大受欢迎的化妆师，她经常会将...</p>
+                    </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!--有道词典html部分结束---王超-->
+    <!--王超右键菜单html模块-->
+        <ul id="menu">
+            <li><em class="creat"></em><a href="javascript:;">新建&nbsp;&nbsp;&nbsp;></a>
+                <ul id="createMenu">
+                    <li>文本文档</li>
+                    <li>QQ</li>
+                    <li>计算器</li>
+                    <li>CHROME</li>
+                    <li>有道词典</li>
+                </ul>
+            </li>
+            <li><em class="cut"></em><a href="javascript:;">剪切</a></li>
+            <li><em class="copy"></em><a href="javascript:;">复制</a></li>
+            <li><em class="paste"></em><a href="javascript:;">粘贴</a></li>
+            <li><em class="f5"></em><a href="#">刷新</a></li>
+            <li><em class="del"></em><a href="javascript:;" id="xx_delEle">删除</a></li>
+            <li id="gxh"><em class="gxh"></em><a href="javascript:;">个性化</a></li>
+
+        </ul>
+    <!--王超烟花三个按钮-->
+        <div id="tips">
+            <a id="manual" href="javascript:;">click</a>
+            <a id="auto" href="javascript:;">auto</a>
+            <a id="stop" href="javascript:;">stop</a>
+        </div>
+    <script>
+        var icon_datas = [
+            { "name": "我的电脑", "src": "icon_images/imageres.dll(149).ico" },
+            { "name": "回收站", "src": "icon_images/imageres.dll(55).ico" },
+            { "name": "Google Chrome", "src": "icon_images/smalllogo.png" },
+            { "name": "QQ", "src": "icon_images/QQicon.png" },
+            { "name": "Photoshop", "src": "icon_images/Photoshop.exe(1000).ico" },
+            { "name": "有道词典", "src": "icon_images/youdao6.png" },
+            { "name": "英雄联盟", "src": "icon_images/Client.exe(102).ico" },
+            { "name": "计算器", "src": "icon_images/jisuanqi.png" },
+            { "name": "Webstorm", "src": "icon_images/WebStorm.exe(107).ico" },
+            { "name": "记事本", "src": "icon_images/记事本.png", "ID": "WZ_btn3" }
+        ];
+        var des_icon = document.getElementById("des_icon");
+        var ul = document.createElement("ul");
+        for (var i = 0; i < icon_datas.length; i++) {
+            if (i < 10) {
+                var li = document.createElement("li");
+                li.innerHTML = '<div class="total_icon" id=' + icon_datas[i].ID + '><div class="mini_icon">' +
+                    '<img src="' + icon_datas[i].src + '" alt=""></div>' +
+                    '<div class="info_icon"><p>' + icon_datas[i].name + '</p></div></div>';
+                ul.appendChild(li);
+                des_icon.appendChild(ul);
+            }
+        }
+    </script>
+    <!--js01_dzy：自动添加图标部分-->
+    <script src="WZ_JS/WZ_main.js"></script>
+    <!--记事本引入JS外链-->
+    <script src="WZ_jquery/jquery-1.12.4.js"></script>
+    <!--设置桌面图标双击事件-->
+    <script src='js/click.js'></script>
+    <script>
+        var dzy_des = document.getElementById("destop");
+        var pw_ipt = document.getElementById("dzy_pw");
+        var dzy_loading = document.getElementById("dzy_loading");
+        pw_ipt.onfocus = function () {
+            pw_ipt.setAttribute("placeholder", "");
+            pw_ipt.style.backgroundColor = "rgba(256, 256, 256, 0.5)";
+            pw_ipt.style.border = " 1px solid white";
+            myShow(pw_ipt);
+        };
+        pw_ipt.onblur = function () {
+            pw_ipt.setAttribute("placeholder", "PIN");
+            pw_ipt.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+            pw_ipt.value = "";
+            pw_ipt.style.border = "1px solid rgba(0, 0, 0, 0.8)";
+            pw_ipt.setAttribute("placeholder", "PIN");
+        };
+        pw_ipt.onkeydown = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) { // enter 键
+                //要做的事情
+                if (pw_ipt.value == "123456") {
+                    myDis(pw_ipt, 75);
+                    myShow(dzy_loading, 75);
+                    pw_ipt.remove();
+                    var dzy_timer = setTimeout(function () {
+                        myDis(dzy_suoping_passwordArea, 100);
+                        myDis(dzy_icon, 100);
+                    }, 800);
+                    var dzy_timer_1 = setTimeout(function () {
+                        dzy_des.style.display = "block";
+                        dzy_des.style.opacity = 0;
+                        myDis($("#dzy_suoping_total")[0], 70);
+                        $("#dzy_suoping_icon").remove();
+                        $("#dzy_suoping_passwordArea").remove();
+                        $("#dzy_suoping_total").remove();
+                        myShow(dzy_des, 70);
+                    }, 1200);
+                } else {
+                    pw_ipt.value = "";
+                    var count = 0;
+                    clearInterval(timer);
+                    timer = setInterval(function () {
+                        pw_ipt.style.top = Math.random() * 4 - 2 + "px";
+                        pw_ipt.style.left = Math.random() * 4 - 2 + "px";
+                        count++;
+                        if (count == 20) {
+                            pw_ipt.style.top = 0;
+                            pw_ipt.style.left = 0;
+                            clearInterval(timer);
+                        }
+                    }, 20);
+                }
+            }
+        };  //判断密码输入是否正确
+    </script>
+    <!--dzy：控制密码输入-->
+    <!-----------------------------------------------桌面部分---------------------------------------------------------------->
+    <!----------------------------------------------高九栋js任务栏开始------------------------------>
+    <script src="js/gjdtaskbar.js"></script>
+    <script src="js/common.js"></script>
+    <!--王超--计算器--js代码-->
+    <script src="js/calc.js"></script>
+    <!--王超--有道词典--js代码-->
+    <script src="js/youdao.js"></script>
+    <!--王超--右键菜单--js代码-->
+    <script src="js/rightclick.js"></script>
+    <!--王超--放烟花--js代码-->
+    <script src="js/yanhua.js">
+    </script>
+    <!----------------------------------------------高九栋js任务栏结束------------------------------>
+    <!---------------------------------------王卫昆  桌面背景js------------>
+    <script src="js/texiao.js"></script>
+    <!------------------------------回收站js-------------------------------------------------------------->
+    <script src="js/recycle-bin.js"></script>
+    <!------------------------------回收站js结束-------------------------------------------------------------->
+
+</body>
+
+</html>

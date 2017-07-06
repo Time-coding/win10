@@ -1,0 +1,507 @@
+
+/*遮盖部分*/
+
+.all {
+    position: relative;
+    padding-bottom: 0;
+    height: 100%;
+    min-height: 600px;
+}
+
+/*皮肤部分 开始*/
+.zy_slider {
+    height: 300px;
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    z-index: 5;
+    display: none;
+}
+
+.zy_slider li {
+    position: absolute;
+    display: none;
+}
+.zy_slider li img {
+    width: 600px;
+    height: 300px;
+}
+.zy_slider li:first-child {
+    display: block;
+}
+
+.zy_arrow {
+    display: none;
+}
+
+.zy_slider:hover .zy_arrow {
+    display: block;
+}
+
+.arrow-left,
+.arrow-right {
+    font-family: "SimSun", "宋体";
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+/*皮肤部分 结束*/
+
+/*head start*/
+.zy_t_l {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 32px;
+    margin: 10px 0 5px;
+    display: none;
+}
+.zy_t_l .weather {
+    margin: 7px 10px 0 15px;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    opacity:0.5;
+}
+.zy_t_l .zy_l_r a {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 19px;
+    color: #555;
+    text-decoration: underline;
+    outline: none;
+    display: inline-block;
+    text-shadow: none;
+    cursor: pointer;
+}
+.zy_head {
+    position: relative;
+}
+
+.zy_head .zy_nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 15px 0 5px;
+    padding: 0 96px 0 0;
+}
+
+.zy_head .zy_nav .nav {
+    float: left;
+    color: #333;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.zy_head .zy_nav .nav:hover {
+    color: #00c;
+}
+.zy_head .zy_nav .more_pro {
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: #fff;
+    background: #38f;
+    line-height: 23px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+}
+.zy_more {
+    display: none;
+    height: 600px;
+    width: 85px;
+    border-left: 1px solid #e7e7e7;
+    position: absolute;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    z-index: 2;
+    right: 0;
+    top: 0;
+}
+.zy_more #zy_m_pro {
+    color: #333;
+    text-align: center;
+    width: 66px;
+    height: 43px;
+    line-height: 43px;
+    padding-top: 9px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    font-size: 13px;
+    cursor: default;
+}
+.zy_more a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+}
+.zy_more a span {
+    width: 40px;
+    height: 36px;
+    display: block;
+    margin: 10px auto 5px;
+    cursor: pointer;
+}
+.zy_more .nuomi {
+    background: url("../img/ruomi.png") no-repeat;
+}
+.zy_more .music {
+    background: url("../img/music.png") no-repeat;
+}
+.zy_more .pic {
+    background: url("../img/image.png") no-repeat;
+}
+.zy_more .know {
+    background: url("../img/zhidao.png") no-repeat;
+}
+.zy_more .wenku {
+    background: url("../img/wenku.png") no-repeat;
+}
+.zy_more .tuiguang {
+    background: url("../img/tuiguang.png") no-repeat;
+}
+.zy_more .all_pro {
+    margin-top: 15px;
+    height: 30px;
+    width: 85px;
+    overflow: hidden;
+}
+/*head end*/
+
+/*denglu start*/
+.zy_DL {
+    width: 393px;
+    height: 450px;
+    display: none;
+    position: absolute;
+    top:90px;
+    left: 430px;
+    z-index: 10;
+}
+.zy_DL .zy_DL_t {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-width: 1px 1px 0;
+    position: relative;
+    cursor: move;
+}
+.zy_DL .zy_DL_t .zy_close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    font-size: 16px;
+}
+.zy_DL .zy_DL_t span {
+    width: auto;
+    height: 16px;
+    font-size: 16px;
+    font-family: 宋体;
+    font-weight: 700;
+    color: rgb(102, 102, 102);
+    text-indent: 50px;
+    margin-right: 29px;
+    display: block;
+    text-overflow: ellipsis;
+    text-align: left;
+    box-sizing: content-box;
+    padding: 16px 0px 13px;
+    background: url("../img/bd_dl_logo.png") 18px 8px no-repeat;
+    overflow: hidden;
+}
+.zy_DL .zy_DL_m {
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    border-width: 0 1px 1px;
+    border-top: 1px solid #F2F2F2;
+    width: 391px;
+    height: 314px;
+}
+.zy_DL .zy_DL_m .zy_m_b {
+    padding: 0 20px;
+    position: relative;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_userName {
+    margin-bottom: 15px;
+    margin-top: 45px;
+    position: relative;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_userName span {
+    background: url("../img/input_icons.png") -5px -73px no-repeat;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    z-index: 10;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_userName input {
+    width: 288px;
+    padding-left: 38px;
+    position: relative;
+    height: 16px;
+    padding: 12px 30px;
+    border: 1px solid #ddd;
+    transition: .3s;
+    font-size: 14px;
+    color: #666;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_password {
+    margin-bottom: 15px;
+    position: relative;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_password span {
+    background: url("../img/input_icons.png") -5px -150px no-repeat;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    z-index: 10;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_password input {
+    width: 288px;
+    padding-left: 38px;
+    position: relative;
+    height: 16px;
+    padding: 12px 30px;
+    border: 1px solid #ddd;
+    transition: .3s;
+    font-size: 14px;
+    color: #666;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_zidong {
+    height: 15px;
+    margin-bottom: 15px;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_zidong span {
+    float: left;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_zidong input {
+    vertical-align: middle;
+    display: inline;
+    color: #666;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.zy_DL .zy_DL_m .zy_m_b .zy_zidong a {
+    cursor: pointer;
+    color: #3f89ec;
+    position: absolute;
+    right:20px;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_zidong a:hover {
+    text-decoration: underline;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_dlBtn {
+    position: relative;
+    margin-bottom: 15px;
+}
+.zy_DL .zy_DL_m .zy_m_b .zy_dlBtn button {
+    display: block;
+    width: 350px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #3f89ec;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 0px;
+}
+.zy_DL .zy_DL_m .zy_zhuce {
+    cursor: pointer;
+    position: relative;
+}
+.zy_DL .zy_DL_m .zy_zhuce a {
+    display: block;
+    color: #3f89ec;
+    position: absolute;
+    right:20px;
+    text-decoration: underline;
+}
+.zy_DL .zy_DL_b {
+    width: 391px;
+    height: 88px;
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+/*denglu end*/
+
+/*search start*/
+.zy_search {
+    padding-top: 60px;
+}
+
+.zy_search .logo img {
+    width: 270px;
+    height: 129px;
+}
+
+.zy_search .zy_sea {
+    width: 645px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.zy_search .zy_sea .zy_text {
+    border: 1px solid #b6b6b6;
+    border-right: none;
+    background: #fff;
+    display: inline-block;
+    width: 531px;
+    height: 34px;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.zy_search .zy_sea .zy_btn {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-size: 15px;
+    background: #3385ff;
+    border-bottom: 1px solid #3385ff;
+    cursor: pointer;
+}
+#pop {
+    width: 539px;
+    border: 1px solid #ccc;
+    padding: 0px;
+    position: absolute;
+    top: 35px;
+    text-align: left;
+}
+
+#pop ul li {
+    padding-left: 5px;
+}
+
+#pop ul li:hover {
+    background-color: #CCC;
+}
+/*search end*/
+
+/*erweima start*/
+.zy_erweima {
+    text-align: center;
+    position: absolute;
+    bottom: 140px;
+    height: 60px;
+    width: 100%;
+}
+
+.zy_erweima .zy_ma {
+    margin: 0 auto;
+}
+
+.zy_erweima .zy_ma .pic {
+    background: url(../img/erweima.png) 0 0 no-repeat;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.zy_erweima .zy_ma .text {
+    color: #999;
+    line-height: 23px;
+    margin: 3px 0 0 5px;
+}
+
+.zy_erweima .zy_ma .text p {
+    font-weight: 700;
+}
+
+/*erweima end*/
+
+/*footer start*/
+.zy_footer {
+    height: 50px;
+    position: absolute;
+    bottom: 47px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.zy_footer .zy_con {
+    color: #999;
+    display: inline-block;
+    line-height: 22px;
+    position: relative;
+    top: -2px;
+}
+
+.zy_footer .zy_con .one a {
+    margin-left: 25px;
+    text-decoration: underline;
+}
+.zy_footer .zy_con .two a {
+    text-decoration: underline;
+}
+.zy_footer .zy_con .two .c_icon {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url(../img/copy_rignt.png) no-repeat;
+}
+.zy_footer .zy_con .two .jing {
+    margin-left: 15px;
+}
+.zy_footer .zy_con .two .c_icon_jing {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url(../img/icon-police.png) no-repeat;
+}
+/*footer end*/

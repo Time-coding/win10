@@ -1,0 +1,271 @@
+﻿#youdao {
+    height: 543px;
+    width: 789px;
+    position: absolute;
+    top:30px;
+    left:400px;
+    background-color: #fff;
+    margin-left: 100px;
+    display: none;
+    border: 1px solid #9e9e9e;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.ydhead {
+    height: 60px;
+    width: 789px;
+    position: relative;
+    background-color: #f44c4c;
+}
+
+.ydhead img {
+    margin: 13px 20px;
+    float: left;
+}
+
+.ydhead span {
+    float: left;
+    font: 16px/60px Microsoft YaHei;
+    color: #fff;
+    cursor: default;
+}
+.ydhead input {
+    margin: 14px 25px;
+    height: 30px;
+    width: 310px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+.ydhead .icof {
+    border-radius: 5px;
+    height: 28px;
+    font:900 24px/24px Microsoft YaHei;
+    width: 20px;
+    position: absolute;
+    top:15px;
+    margin-left:-50px;
+    color: #f44c4c;
+    background-color: #fff;
+}
+.ydhead .lishijilu {
+    font-weight:700;
+    position: absolute;
+    left: 550px;
+}
+.ydhead .ydrt {
+    float: right;
+    cursor: default;
+}
+.ydhead .ydrt li {
+    float: left;
+    font:30px/50px Microsoft YaHei;
+    margin-right: 15px;
+    color: #fff;
+}
+.ydleft {
+    width: 140px;
+    float: left;
+    border-right:1px solid #9e9e9e;
+}
+
+.ydleftul {
+    padding: 20px 0;
+}
+
+.ydleft li {
+    height: 40px;
+    padding-left:20px;
+    font: 16px/40px Microsoft YaHei;
+    color: #9e9e9e;
+}
+.ydleft .ydleftul li:hover {
+    color: #f00;
+    background-color: rgba(255,0,0,0.1);
+}
+.ydfengexian {
+    border-top: 1px solid #9e9e9e;
+    margin: 0 20px;
+}
+.ydright {
+    float: right;
+    width: 648px;
+    height: 440px;
+
+}
+.slider {
+    height: 190px;
+    width: 648px;
+
+    position: relative;
+}
+
+.slider li {
+    position: absolute;
+    display: none;
+}
+
+.slider li span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #fff;
+}
+.slider li span .eng {
+    font-weight: 700;
+    font-size:18px;
+}
+.slider li span .chs {
+    font-size:14px;
+}
+.slider li:first-child {
+    display: block;
+}
+.ydright .slider .yuandian {
+    width: 80px;
+    height: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+.ydright .slider .yuandian li {
+    position: static;
+    display: inline-block;
+    float: left;
+    margin-left:5px;
+    background-color: #fff;
+    opacity:0.5;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+}
+.ydright .slider .yuandian li:first-child {
+    opacity: 1;
+}
+.arrow {
+    display: none;
+}
+
+.slider:hover .arrow {
+    display: block;
+}
+
+.arrow-left,
+.arrow-right {
+    font-family: "SimSun", "宋体";
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+.ydright .ydlist li {
+    margin: 18px;
+    height: 75px;
+}
+.ydright .ydlist li img {
+    float: left;
+
+}
+.ydright .ydlist li span {
+    float: left;
+    font-size:16px;
+    margin-top:10px;
+    padding-left:20px;
+    color: #9e9e9e;
+}
+.ydright .ydlist li span a{
+    color:#2b2b2b;
+    text-decoration:none;
+}
+.ydright .ydlist li span a:hover{
+    color: #ff0000;;
+    text-decoration:none;
+}
+/*腾讯新闻样式*/
+#newshead{
+        margin-bottom:-4px;
+    }
+    #txclosed{
+        position: absolute;
+        right: 5px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+    }
+       
+    .wrapper {
+      width: 750px;
+      height: 540px;
+        position: absolute;
+        top: 100px;
+        left:300px;
+        display: none;
+    }
+    
+    .tab {
+      border: 1px solid #ddd;
+      border-top: 0;
+      height: 36px;
+      width: 744px;
+background:#fff;
+    }
+    
+    .tab li {
+      position: relative;
+      float: left;
+      width: 62px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      cursor: pointer;
+      border-bottom: 4px solid #fff;
+    }
+    
+    .tab span {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      background: #ddd;
+      width: 1px;
+      height: 14px;
+      overflow: hidden;
+    }
+    
+    .products {
+      width: 744px;
+      height: 476px;
+    }
+    
+    .products .main {
+      float: left;
+      display: none;
+    }
+    
+    .products .main.selected {
+      display: block;
+    }
+    
+    .tab li.active {
+      border-color: #4284da;
+      border-top: 0;
+    }

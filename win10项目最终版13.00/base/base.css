@@ -1,0 +1,55 @@
+html, body, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background: url(../img/img1.jpg) no-repeat;
+    overflow:hidden;
+}
+span{
+    cursor: default;
+}
+ul li{
+    list-style: none;
+    cursor: default;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul {
+    padding: 0;
+}
+
+li {
+
+    list-style: none;
+}
+.w{
+    width: 1190px;
+    margin: 0 auto;
+}
+
+#xiaotu {
+
+    list-style: none;
+}
+
+#xiaotu li {
+    margin: 0px 20px 20px 0px;
+    padding: 0px;
+    display: inline;
+}
+
+#xiaotu li a img {
+    border: 0;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}

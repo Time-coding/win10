@@ -1,0 +1,41 @@
+html, body {
+            overflow: hidden;
+        }
+
+        body, div, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            font: 12px/1.5 arial;
+            color: #7A7A7A;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        #tips {
+            width: 60px;
+            position: fixed;
+            bottom: 50px;
+            right: 0;
+            opacity: 0;
+        }
+
+        #tips a {
+            font: 14px/30px arial;
+            color: #FFF;
+            background: #F06;
+            display: inline-block;
+            margin: 10px 5px 0;
+            padding: 0 15px;
+            border-radius: 15px;
+        }
+
+        #tips a.active {
+            background: #FE0000;
+        }

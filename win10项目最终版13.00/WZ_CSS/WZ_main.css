@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    overflow: hidden;
+}
+#box_img{
+  background:url("../WZ_images/img0.jpg") no-repeat center center;
+        }
+.WZ_JSBF{
+    display:block;
+    float:left;
+}
+#WZ_JSB{
+    border-radius: 0px 0px 20px 20px ;
+    width: 630px;
+    height:350px;
+    float:left;
+    outline:medium;
+    border:1px solid #0078D7;
+    border-top:1px solid #3b698d;
+    overflow-y:scroll;
+    overflow-x:scroll;
+}
+.WZ_JSBbox{
+    position: relative;
+    position:absolute;
+    left:28%;
+    top:18%;
+}
+
+
+.icon-jinlingyingcaiwangtubiao62-copy-copy {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    padding-right:2px;
+    padding-left:5px;
+    margin-top:4px;
+    color:white;
+    font-weight: 700;
+    position: absolute;
+    left:1px;
+    top:1px;
+}
+.WZ_JSBbox1 span{
+    display: inline-block;
+    width: 43px;
+    height: 20px;
+    border:1px solid transparent;
+    border-radius: 3px;
+    font-size:12px;
+    text-align: center;
+    padding-left:3px;
+    padding-right:3px;
+    cursor:default;
+}
+
+.WZ_JSBbox1{
+    line-height: 19px;
+    font-family: 微软雅黑;
+    height: 23px;
+    background:white;
+    border-bottom:1px solid #ccf8ff;
+}
+
+#WZ_jsjtz span{
+    line-height: 25px;
+    padding-left:25px;
+    color:white;
+    font-size: 13px;
+    border:none;
+    outline:medium;
+    cursor:default;
+    font-family:monospace;
+}
+.WZ_JSBbox img{
+    background: #0078D7;
+    position: absolute;
+    left:10px;
+    top:10px;
+    border:0px;
+}
+.WZ_JSBbox .WZ_if i{
+    float: right;
+    font-style:normal;
+    cursor: pointer;
+    font-size:23px;
+    color: white;
+    width: 34px;
+    height: 26px;
+    line-height:20px;
+    text-align: center;
+}
+.WZ_JSBbox .WZ_if{
+    float:right;
+}
+#jsbs{
+    display: inline-block;
+    padding:8px 1px 0 1px;
+    padding-top:0px;
+    background-color:#0078D7;
+    border-radius: 1px 1px 1px 1px ;
+}
+#WZ_jsjtz{
+    height: 26px;
+    cursor:default;
+}

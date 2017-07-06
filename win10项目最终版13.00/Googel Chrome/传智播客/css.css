@@ -1,0 +1,376 @@
+/*css初始化代码*/
+body {margin:0; padding:0; font:12px/1.5 "微软雅黑",\5b8b\4f53,Arial,sans-serif; color: #3b3b3b;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+a {color:#252525; text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {color:#ba2636;text-decoration: underline;}
+a:active {color:#ba2636;}
+.w {
+	width: 1200px;
+	margin: 0 auto;;
+}
+/*top部分开始*/
+.top {
+	background-color: #055C92;
+	height: 40px;
+	border-bottom: 1px #DDDDDD solid;
+}
+.topin {
+	height: 40px;
+}
+.topin .top1 {
+	color: #FFFFFF;
+	line-height: 40px;
+	font-size: 12px;
+	float: left;
+}
+.topin .top2 {
+	color: #FFFFFF;
+	line-height: 40px;
+	font-size: 12px;
+	float: right;
+}
+/*logo部分开始*/
+.logo {
+	height: 113px;
+}
+.logopic {
+	float: left;
+	margin: 28px 54px 0 0;
+
+}
+.logo .nav {
+	float: left;
+}
+.nav li {
+	height: 113px;
+	float: left;
+	margin: 0 15px 0;
+}
+.nav li a {
+	font-size: 14px;
+	color: #333333;
+	line-height: 113px;
+}
+.banner {
+	height: 400px;
+	margin-bottom: 57px;
+}
+.spread {
+	height: 400px;
+	position: relative;
+	margin-right: 10px;
+	float: left;
+}
+.spread .peixun {
+	position: absolute;
+	left: 0px;
+	top: 0;
+	float: left;
+}
+.spread .peixun ul {
+	height: 381px;
+	width: 232px;
+	background-color: rgba(0,0,0,0.6);
+	padding-top: 19px;
+}
+.spread .peixun li {
+	background: url(images/right.png) no-repeat 182px center;
+	height: 36px;
+	cursor: pointer;
+}
+.spread .peixun li:hover {
+	background-color: rgba(0,0,0,0.7);
+}
+.spread .peixun a {
+	color: white;
+	font-size: 14px;
+	margin-left: 38px;
+	line-height: 36px;
+}
+.spread .peixun a:hover {
+	text-decoration: none;
+}
+.info {
+	height: 400px;
+	width: 232px;
+	float: left;
+}
+.info>dl dt {
+	height: 45px;
+	width: 232px;
+	background-color: #055C92;
+	text-align: center;
+	line-height: 45px;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.dt {
+	width: 230px;
+	height: 353px;
+	border: 1px #E0E0E0 solid;
+	background-color: #F9F9F9;
+}
+.info dd {
+	margin: 12px 0 12px 0;
+	padding-left: 19px;
+	background: url(images/sq.png) 8px center no-repeat;
+	font-size: 12px;
+}
+.info dd a {
+	line-height: 27px;
+}
+.info .red {
+	color: red;
+}
+.study {
+	height: 240px;
+}
+.s-info {
+	height: 45px;
+}
+.s-info .info1 {
+	font-size: 22px;
+	float: left;;;]]
+	line-height: 45px;
+}
+.s-info .info2 {
+	float: right;
+	margin: 5px 5px 0 0;
+}
+.s-info .info2 li {
+	float: left;
+	font-size: 12px;
+}
+.s-info .info2 .blue {
+	color: #0099E5;
+}
+.open {
+	height: 219px;
+}
+.i {
+	height: 193px;
+	width: 230px;
+	border: 1px solid #E0E0E0;
+	position: relative;
+	float: left;
+	margin-right: 10px;	
+	position: relative;
+}
+.open img {
+	width: 230px;
+	height: 119px;
+}
+.time {
+	height: 20px;
+	width: 232px;
+	background-color: rgba(0,0,0,0.5);
+	font-size: 10px;
+	line-height: 20px;
+	position: absolute;
+	left: 0;
+	top: 99px;
+	color: white;
+	width: 230px;
+}
+.i .title {
+	margin-left: 10px;
+}
+.title h3 {
+	height: 35px;
+	font-size: 12px;
+}
+.title span {
+	font-size: 10px;
+	color: #333333;
+	line-height: 20px;
+}
+.i-pic {
+	margin-bottom: 5px;
+}
+.i button {
+	border: 1px #ED4300 solid;
+	color: #ED4300;
+	font-size: 11px;
+	outline: none;
+	background-color: #fff;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-weight: 500;
+	cursor: pointer;
+}
+.study .i2 {
+	margin-right: 0px;
+}
+/*story*/
+.story {
+	height: 264px;
+	margin-bottom: 58px;
+}
+.st-info {
+	height: 45px;
+}
+.st-info .st-info1 {
+	font-size: 22px;
+	float: left;
+	line-height: 45px;
+}
+.st-info .st-info2 {
+	float: right;
+	margin: 5px 5px 0 0;
+}
+.st-info .st-info2 li {
+	float: left;
+	font-size: 12px;
+}
+.st-info .st-info2 .blue {
+	color: #0099E5;
+}
+.story-news {
+	height: 217px;
+}
+.st-pic {
+	float: left;
+	border: 1px solid #E0E0E0;
+	width: 290px;
+	height: 217px;
+	text-align: center;
+	margin-right: 10px;
+}
+.st-pic span {
+	text-align: center;
+	font-size: 12px;
+}
+.st-pic img {
+	height: 162px;
+	width: 288px;
+	margin-bottom: 21px;
+	cursor: pointer;
+}
+/*social*/
+.so-info {
+	height: 45px;
+}
+.so-info .so-info1 {
+	font-size: 22px;
+	float: left;
+	line-height: 45px;
+}
+.so-info .so-info2 {
+	float: right;
+	margin: 5px 5px 0 0;
+}
+.so-info .so-info2 li {
+	float: left;
+	font-size: 12px;
+}
+.so-info .so-info2 .blue {
+	color: #0099E5;
+}
+.social-item {
+	height: 226px;
+	margin-bottom: 58px;
+}
+.soc {
+	float: left;
+	border: 1px solid #E0E0E0;
+	width: 288px;
+	height: 217px;
+	text-align: center;
+	margin-right: 10px;
+	margin-bottom: 43px;
+}
+.soc span {
+	text-align: center;
+	font-size: 12px;
+}
+.soc img {
+	height: 162px;
+	width: 288px;
+	margin-bottom: 21px;
+	cursor: pointer;
+}
+.free {
+	height: 113px;
+	background-color: #F3F3F3;
+}
+.freein {
+	height: 113px;
+}
+.freein li {
+	line-height: 113px;
+	text-align: right;
+	width: 204px;
+	float: left;
+	background: url(images/freed.png) no-repeat right center;
+	font-size: 12px;
+	padding-right: 36px;
+}
+/*about*/
+.about {
+	height: 160px;
+	border-bottom: 1px  #E0E0E0 solid;
+}
+.about dl {
+	margin-top: 30px;
+	float: left;
+	width: 170px;
+}
+.about dt {
+	font-size: 12px;
+	color: #333333;
+	margin-bottom: 19px;
+}
+.about dd {
+	font-size: 10px;
+	margin-bottom: 13px;
+}
+.about dd a {
+	color: #8D8D8D;
+}
+.fri {
+	height: 138px;
+	border-bottom: 1px  #E0E0E0 solid;
+}
+.fri dt {
+	margin-bottom: 10px;
+	color: #333333;
+}
+.fri dl {
+	margin-top: 25px;
+	margin-bottom: 12px;
+}
+.fri dd {
+	line-height: 26px;
+	color: #333333;
+	margin-right: 3px;
+	display: inline;
+}
+.fri dd a {
+	color: #8D8D8D;
+}
+.foot {
+	height: 118px;
+}
+.foot .f-logo {
+	margin-top: 30px;
+	margin-right: 20px;
+	float: left;
+}
+.foot .law {
+	margin-top: 28px;
+	float: left;
+}
+.foot .law span {
+	line-height: 25px;
+	color: #333333;
+}

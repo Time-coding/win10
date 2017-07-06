@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#xx_recycle {
+    width: 760px;
+    height: 560px;
+    background:url("../fuxx-images/bg.png");
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    display: none;
+}
+
+#xx_box{
+    float: right;
+    width: 27px;
+    height: 27px;
+    background: url("../fuxx-images/close-bg.png") no-repeat -100px 0px;
+}
+
+#xx_content {
+    width: 585px;
+    height: 425px;
+    position: absolute;
+    right: 17px;
+    bottom: 17px;
+}
+
+#xx_content li{
+    display: inline-block;
+    width: 70px;
+    height: 80px;
+    margin:5px 5px;
+    text-align: center;
+    position: relative;
+}
+#xx_box{
+    position: absolute;
+    width:20px;
+    right: 13px;
+    top:0px;
+    cursor: default;
+}

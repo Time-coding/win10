@@ -1,0 +1,397 @@
+#qq-zt {
+  width: 60px;
+  height: 60px;
+}
+
+#login-zt {
+  position: absolute;
+  width: 430px;
+  height: 330px;
+  top: 50%;
+  left: 50%;
+  margin-left: -215px;
+  margin-top: -165px;
+  display: none;
+}
+
+.close-zt, .min-zt {
+  position: absolute;
+  top:0;
+  right:0;
+  width: 29px;
+  height: 29px;
+  line-height: 29px;
+  color: white;
+  text-align: center;
+}
+.close-zt i, .min-zt i{
+  font-size: 12px;
+}
+.min-zt{
+  right:29px;
+}
+.close-zt:hover {
+  background-color: #D44027;
+}
+
+.min-zt:hover {
+  background-color: Rgba(0, 1, 2, .2);
+}
+
+#login-zt-up {
+  height: 182px;
+  width: 430px;
+  background: deepskyblue url("../images/QQicon.png") no-repeat center center;
+  background-size: 15%;
+}
+
+#login-zt-down {
+  height: 148px;
+  width: 430px;
+  background-color: #EBF2F9;
+  position: relative;
+}
+
+.portrait-zt {
+  position: absolute;
+  top: 15px;
+  left: 42px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #EBF2F9;
+  border-radius: 42px;
+  background: url("../images/bigTom.jpg") no-repeat center center;
+  background-size: 100%;
+}
+
+#login-username-zt, #login-password-zt {
+  display: block;
+  width: 184px;
+  height: 28px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  position: absolute;
+  left: 136px;
+  padding-left: 5px;
+}
+
+#login-username-zt {
+  top: 12px;
+}
+
+#login-password-zt {
+  top: 43px;
+}
+
+#login-register-zt, #login-forget-zt {
+  display: block;
+  font-size: 12px;
+  text-decoration: none;
+  position: absolute;
+  top: 18px;
+  right: 42px;
+}
+
+#login-forget-zt {
+  top: 51px;
+}
+
+#right-zt, #wrong-zt {
+  width: 189px;
+  height: 20px;
+  position: absolute;
+  left: 136px;
+  bottom: 47px;
+  font-size: 14px;
+  /*display: none;*/
+}
+
+#right-zt {
+  color: green;
+  display: none;
+}
+
+#wrong-zt {
+  color: red;
+  display: none;
+}
+
+#login-bar-zt {
+  width: 189px;
+  height: 28px;
+  background-color: deepskyblue;
+  color: white;
+  border: 1px solid deepskyblue;
+  border-radius: 1px;
+  position: absolute;
+  left: 136px;
+  bottom: 13px;
+}
+
+#mainWindow-zt {
+  height: 487px;
+  width: 290px;
+  background-color: #F2F9FD;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
+#mainWindow-zt-top .portrait-zt {
+  width: 66px;
+  height: 66px;
+  top: 40px;
+  left: 20px;
+  background: url("../images/bigTom.jpg") no-repeat;
+  background-size: 100%;
+  border: 1px solid deepskyblue;
+}
+
+#mainWindow-zt-top {
+  height: 122px;
+  background-color: deepskyblue;
+  position: relative;
+}
+
+#mainWindow-zt-top-name {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-size: 18px;
+}
+
+#mainWindow-zt-top-signature {
+  position: absolute;
+  top: 67px;
+  left: 100px;
+  font-size: 13px;
+}
+
+#mainWindow-zt-top-qzone {
+  position: absolute;
+  top: 87px;
+  left: 100px;
+  font-size: 13px;
+}
+
+#mainWindow-zt-top-qzone li {
+  display: inline-block;
+}
+#mainWindow-zt-top-qzone li:hover {
+    background-color: Rgba(0, 1, 2, .2);
+}
+
+#mainWindow-zt-middle {
+  position: relative;
+  background-color: #D5E6F5;
+  height: 325px;
+}
+
+#mainWindow-zt-middle-tagBar {
+  height: 35px;
+  border-bottom: 2px solid #C3D1E0;
+}
+#mainWindow-zt-middle-tagBar ul li{
+  float:left;
+  height: 35px;
+  text-align: center;
+  width: 145px;
+  line-height: 35px;
+}
+#mainWindow-zt-middle-tagBar i{
+  font-size: 20px;
+}
+.chosen{
+  border-bottom:2px solid deepskyblue ;
+}
+
+#mainWindow-zt-middle-list li {
+  height: 56px;
+  position: relative;
+}
+#mainWindow-zt-middle-list li:hover {
+  background-color: #EBF2F9;
+}
+
+
+#mainWindow-zt-middle-list .friends{
+  /*display: none;*/
+}
+.mainWindow-zt-middle-list-block-portrait {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D5E6F5;
+  border-radius: 21px;
+  background: url("../images/bigaragorn.jpg");
+  background-size: 100%;
+}
+.mainWindow-zt-middle-list-block-portrait2 {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D5E6F5;
+  border-radius: 21px;
+  background: url("../images/ironman.jpg");
+  background-size: 100%;
+}
+.mainWindow-zt-middle-list-block-portrait3 {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D5E6F5;
+  border-radius: 21px;
+  background: url("../images/xiaoqie.png");
+  background-size: 100%;
+}
+.mainWindow-zt-middle-list-block-portrait4 {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D5E6F5;
+  border-radius: 21px;
+  background: url("../images/xiaoluban.jpeg");
+  background-size: 100%;
+}
+.mainWindow-zt-middle-list-block-portrait5 {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D5E6F5;
+  border-radius: 21px;
+  background: url("../images/jinganglang.jpg");
+  background-size: 100%;
+}
+.mainWindow-zt-middle-list-block-name {
+  position: absolute;
+  top: 8px;
+  left: 60px;
+  font-size: 14px;
+}
+
+.mainWindow-zt-middle-list-block-message {
+  position: absolute;
+  top: 32px;
+  left: 60px;
+  font-size: 12px;
+}
+#mainWindow-zt-middle-list .group{
+  display: none;
+}
+.mainWindow-zt-middle-list-block-group-portrait{
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #D5E6F5;
+  border-radius: 21px;
+  background: url("../images/ViggoMortensen.jpg");
+  background-size: 100%;
+}
+.mainWindow-zt-middle-list-block-group-name{
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  font-size: 14px;
+}
+
+#mainWindow-zt-bottom {
+  height: 40px;
+  background-color: #EBF2F9;
+}
+#mainWindow-zt-bottom .set, #mainWindow-zt-bottom .add{
+  float: left;
+  margin: 10px;
+  height: 20px;
+}
+
+.add i, .set i{
+  font-size: 14px;
+}
+#mainWindow-zt-bottom .add{
+  float: right;
+}
+#chatWindow-zt {
+  width: 550px;
+  background-color: #D5E6F5;
+  position: absolute;
+  top:50px;
+  left: 300px;
+  /*margin: 50px auto;*/
+  display: none;
+}
+
+#chatWindow-zt-top {
+  height: 70px;
+  border-bottom: 1px solid #C3D1E0;
+  position: relative;
+  background-color: deepskyblue;
+}
+
+#chatWindowPortrait-zt {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 1px solid deepskyblue;
+  border-radius: 26px;
+  margin: 10px;
+  background: url("../images/bigaragorn.jpg") center center;
+  background-size: 100%;
+}
+#chatWindowFriendName-zt{
+  position: absolute;
+  top:10px;
+  left:75px;
+  font-size: 18px;
+}
+#chatWindowFriendSignature-zt{
+  position: absolute;
+  top:38px;
+  left:75px;
+  font-size: 12px;
+}
+
+#chatWindow-zt-middle {
+  border-bottom: 1px solid #C3D1E0;
+  height: 314px;
+  position: relative;
+  padding-top: 10px;
+}
+
+#chatWindow-zt-bottom {
+  height: 100px;
+  background-color: #EBF2F9;
+}
+
+#chatWindow-zt-bottom textarea {
+  height: 49px;
+  width: 540px;
+  background-color: #EBF2F9;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 5px;
+}
+
+#chatWindow-zt-bottom input {
+  float: right;
+  height: 26px;
+  width: 60px;
+  background-color: deepskyblue;
+  margin: 5px 10px 0 0;
+}
+
+
+
+

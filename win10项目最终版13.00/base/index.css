@@ -1,0 +1,714 @@
+.shezhi{
+    width: 750px;
+    height: 450px;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    left:20%;
+    top:10%;
+    /*z-index: 2000;*/
+
+}
+
+.shezhi .biao1{
+    font-weight: 700;
+    color: #fff;
+    line-height: 35px;
+    padding-left: 10px;
+}
+.shezhi .biao2:hover{
+    background-color: red;
+}
+.shezhi .biao2{
+    width: 35px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+
+}
+
+.shezhi_l{
+    width: 150px;
+    height: 300px;
+
+    float: left;
+    margin-top: 30px;
+}
+.shezhi_l ul{
+    height: 300px;
+    width: 160px;
+    line-height: 80px;
+    float: left;
+    text-align: center;
+
+}
+.shezhi_l ul li{
+
+    line-height: 60px;
+    font-size: 14px;
+
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.shezhi_l ul li:hover{
+    background-color: #e6e6e6;
+    color:#0078D7;
+}
+
+.shezhi_t{
+    height: 35px;
+    background-color: #0078D7;
+    cursor: default;
+}
+.shezhi_r{
+    width: 450px;
+    height:250px;
+    float: left;
+    margin-left: 100px;
+    padding-top: 5px;
+}
+.shezhi_r_d{
+    margin-top: 30px;
+}
+.shezhi_r li{
+    float: left;
+    padding-right: 10px;
+}
+
+
+#suoping{
+    display: none;
+}
+
+
+
+.zhuye{
+    width: 900px;
+    height: 600px;
+    background-color: #fff;
+    position: relative;
+    position: absolute;
+    display: none;
+    left:20%;
+    top:10%;
+    z-index: 2000;
+
+}
+
+
+.zhuye .zhuye_m{
+    font-size: 30px;
+    font-weight: 700;
+    padding-left: 350px;
+   }
+.zhuye input{
+    width: 300px;
+    height: 30px;
+    margin-left: 300px;
+    margin-top: 50px;
+    border: 2px solid #0078D7;
+    padding-left: 10px;
+}
+.zhuye_d{
+    width: 800px;
+    height: 300px;
+
+    margin-left: 100px;
+    margin-top: 50px;
+
+}
+.zhuye_d ul{
+
+   margin-left: 50px;
+    padding-top: 20px;
+}
+.zhuye_d ul li{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+
+}
+.zhuye_d ul li:hover{
+    cursor: pointer;
+    opacity: 0.6;
+    }
+.zhuye .biao3{
+    font-weight: 700;
+    color: #fff;
+    line-height: 35px;
+    padding-left: 10px;
+    text-align: center;
+}
+.zhuye .biao4{
+    width: 35px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+ }
+
+.zhuye .biao4:hover{
+   background-color: red;
+}
+
+.hebin2{
+    display: none;
+}
+.hebin2 ul{
+    padding-top: 50px;
+}
+.hebin2 img{
+ float: left;padding-right: 27px;
+}
+
+.zhuxiao{
+    height: 320px;
+    width: 690px;
+    background-color: #F0F0F0;
+    display: none;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-170px -330px;
+    z-index: 2000;
+}
+.zhuxiao_t{
+    height: 36px;
+    background-color: #0078D7;
+}
+.zhuxiao_t_t{
+    color: white;
+    font-weight: 700;
+    line-height: 36px;
+}
+.zhuxiao_m{
+    margin-left: 150px;
+}
+.zhuxiao_m2{
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.zhuxiao input{
+    width: 480px;
+    height: 30px;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.zhuxiao_d{
+    margin-left: 360px;
+    margin-top: 40px;
+}
+.zhuxiao li{
+    float: left;
+}
+.zhuxiao button{
+    width: 80px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#desArea {
+    height: 100%;
+    width: auto;
+    position: relative;
+
+}
+#des_icon {
+    /*width: 80px;*/
+    height: 728px;
+}
+#des_icon ul {
+    width: 80px;
+    float: left;
+    margin-top: 6px;
+    float: left;
+}
+#des_icon li {
+    margin-bottom:26px;
+}
+#des_icon .total_icon img {
+    width: 35px;
+    height: 35px;
+    margin: 0 22px;
+}
+#des_icon .mini_icon {
+
+}
+#des_icon .info_icon {
+    width: 70px;
+    margin: 0 auto;
+}
+#des_icon .total_icon p {
+    font: 10px "微软雅黑";
+    color: white;
+    text-shadow: black 0px 0px 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+#gjd_box{
+    height: 40px;
+    width:100%;
+    position: absolute;
+    bottom:0px;
+    background-color: rgba(53,53,53,.5);
+
+}
+#gjd_sp{
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    line-height:40px;
+    text-align: center;
+    color: #fff;
+    float: left;
+}
+#gjd_sp:hover{
+    background-color: rgba(110,109,113,.5);
+}
+#gjd_menu{
+    width: 505px;
+    height: 491px;
+    border:2px solid rgba(33,34,33,.1);
+    border-bottom:none;
+    border-left:none;
+    background-color: rgba(37,34,33,.9);
+    position: absolute;
+    bottom:-493px;
+    display: none;
+}
+#gjd_menu_l{
+    width:50px;
+    height: 491px;
+    position: relative;
+}
+#gjd_menu_l #i_0{
+    display:inline-block;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    line-height:40px;
+    color: #fff;
+    position: absolute;
+    top:0;
+    left:0;
+}
+#gjd_menu_l #i_0:hover{
+    background-color: rgba(110,109,113,.5);
+}
+#gjd_menu_l #gjd_menu_l_b{
+    text-align: center;
+    line-height:50px;
+    color: #fff;
+    position: absolute;
+    bottom:0;
+}
+#gjd_menu_l #gjd_menu_l_b #i_1{
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+}
+#gjd_menu_l #gjd_menu_l_b #i_1:hover{
+    background-color: rgba(110,109,113,.5);
+
+}
+#gjd_menu_l #gjd_menu_l_b #i_2{
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+}
+#gjd_menu_l #gjd_menu_l_b #i_2:hover{
+    background-color: rgba(110,109,113,.5);
+
+}
+#gjd_menu_l #gjd_menu_l_b #i_3{
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+}
+/*关机设置*/
+#gjd_menu_l #gjd_menu_l_b #i_3 #gj{
+    width: 200px;
+    height: 120px;
+    background-color: rgb(0,0,0);
+    border:1px solid #999999;
+    position: absolute;
+    bottom:0px;
+    z-index:2;
+    display: none;
+}
+#gjd_menu_l #gjd_menu_l_b #i_3 #gj li{
+    font-size:12px;
+    height: 40px;
+    line-height:40px;
+    text-align:left;
+    padding-left:10px;
+}
+#gjd_menu_l #gjd_menu_l_b #i_3 #gj li:hover{
+    background-color: rgba(110,109,113,.5);
+}
+
+#gjd_menu_l #gjd_menu_l_b #i_3:hover{
+    background-color: rgba(110,109,113,.5);
+
+}
+/*菜单menu_m*/
+#gjd_menu_m{
+    width:200px;
+    height:490px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    position: absolute;
+    top:0;
+    left:50px;
+}
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width: 12px;
+}
+/* 滚动槽 */
+#gjd_menu_m:hover::-webkit-scrollbar-track:hover {
+    -webkit-box-shadow: inset 0 0 6px rgba(63,57,53,.1);
+    /*border-radius: 10px;*/
+}
+/* 滚动条滑块 */
+#gjd_menu_m:hover::-webkit-scrollbar-thumb {
+    /*border-radius: 10px;*/
+    background: rgba(110,109,113,.9);
+    /*-webkit-box-shadow: inset 0 0 6px rgba(110,109,113,.9);*/
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(110,109,113,.9);
+}
+
+
+#gjd_menu_m dl{
+    margin:0;
+}
+
+#gjd_menu_m dl dt{
+    height:40px;
+    line-height:40px;
+    padding-left:5px;
+    text-align: left;
+    font-size:14px;
+    width:100%;
+    color: #fff;
+    float: left;
+}
+#gjd_menu_m dl dt:hover{
+    background-color: rgba(110,109,113,.9);
+}
+#gjd_menu_m dl dd{
+    width: 100%;
+    float: left;
+    margin-bottom:2px;
+    margin-left:0;
+}
+#gjd_menu_m dl dd:hover{
+    background-color: rgba(110,109,113,.9);
+}
+#gjd_menu_m dl dd img{
+    width:36px;
+    margin-left:5px;
+    float: left;
+}
+#gjd_menu_m dl dd .dsp{
+    display: inline-block;
+    height: 36px;
+    line-height:36px;
+    font-size:12px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    margin-left:10px;
+}
+
+/*menu_r开始*/
+#gjd_menu_r{
+    width: 252px;
+    height: 490px;
+    margin-left:5px;
+    position: absolute;
+    top:0;
+    left:250px;
+}
+#gjd_menu_r h5{
+    color: #fff;
+    font-size: 15px;
+    margin:0;
+    text-align: left;
+}
+#gjd_menu_r #gjd_pububox{
+    width: 268px;
+    height: 490px;
+}
+#gjd_menu_r #gjd_pububox ul li{
+    margin-right:5px;
+    height: 76px;
+}
+#gjd_menu_r #gjd_pububox ul li img{
+    border:1px solid transparent;
+}
+#gjd_menu_r #gjd_pububox ul li img:hover{
+    border:1px solid rgba(240, 240, 240, 0.9);
+}
+/*搜索框*/
+#gjdipt{
+    /*width: 400px;*/
+    /*height:40px;*/
+    background-color: rgba(240, 240, 240, 0.04);
+    float: left;
+}
+#gjdipt ul li{
+    float: left;
+    background-color:rgba(53,53,53,.9);
+}
+#gjdipt ul li i{
+    display: inline-block;
+    width: 50px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    float: left;
+}
+#gjdipt ul li:hover{
+    background-color: rgba(240, 240, 240, 0.3);
+}
+#gjdipt_t{
+    width: 340px;
+    height:40px;
+    float: left;
+    padding-left: 10px;
+    font-size: 15px;
+    color: #c6c6c6;
+    background-color: rgba(240, 240, 240, 0.09);
+}
+#gjdipt_t:hover{
+    background-color: rgba(240, 240, 240, 0.15);
+}
+/*话筒*/
+#gjdipt #gjdipt_i{
+    width: 49px;
+    height:39px;
+    line-height:40px;
+    text-align: center;
+    font-size:20px;
+    color: rgba(198, 198, 198, 0.84);
+    float: left;
+    background-color: rgba(240, 240, 240, 0.09);
+    border:1px solid transparent;
+}
+#gjdipt #gjdipt_i:hover{
+    background-color: rgba(52, 129, 255, 0.22);
+    border:1px solid rgba(52, 129, 255, 0.22);
+}
+
+/*e*/
+#gjdipt i#gjde{
+    color: #3481ff;
+    font-size:20px;
+    /*background-color:rgba(53,53,53,.9);*/
+}
+
+/*------------------------右-------------*/
+/*右下边消息栏*/
+#gjd_toolbar{
+    float: right;
+    text-align: center;
+    line-height:40px;
+    color: #fff;
+}
+#gjd_toolbar li{
+    float: left;
+}
+/*信息菜单通知*/
+#gjd_toolbar #gjd_messageli{
+    width: 50px;
+    height: 40px;
+    position: relative;
+}
+#gjd_toolbar #gjd_messageli:hover{
+    background-color: rgba(110,109,113,.5);
+}
+#gjd_toolbar #gjd_messageli #gjd_czmiddle{
+    width: 380px;
+    height:769px;
+    /*height:100%;*/
+    /*height:100% !important;*/
+    border:1px solid rgba(37,34,33,.9);
+    background-color:rgba(37,34,33,.9);
+    /*display: none;*/
+    position: absolute;
+    bottom:0;
+    right:-450px;
+    /*right:0px;*/
+}
+#gjd_toolbar #gjd_messageli #gjd_czmiddle h5{
+    float: left;
+    margin-left:10px;
+    font-size: 15px;
+}
+#gjd_toolbar #gjd_messageli #gjd_czmiddle #gjd_czmiddle_b{
+    height: 220px;
+    width: 450px;
+    position: absolute;
+    bottom:0;
+}
+#gjd_toolbar #gjd_messageli .czmbox{
+    height: 69px;
+    width: 92px;
+    text-align:left;
+    background-color: rgba(110,109,113,.9);
+    float: left;
+    padding-left:2px;
+    margin-right:2px;
+    margin-bottom:3px;
+    position: relative;
+    border:1px solid transparent;
+}
+#gjd_toolbar #gjd_messageli .czmbox:hover{
+    border:1px solid rgba(240, 240, 240, 0.9);
+}
+#gjd_toolbar #gjd_messageli #gjd_czmiddle_b span{
+    position: absolute;
+    bottom:0px;
+    left:5px;
+    font-size:12px;
+    font-weight:700;
+    line-height:20px;
+}
+/*箭头*/
+#gjdjt{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size:12px;
+    position: relative;
+}
+#gjdjt:hover{
+    background-color: rgba(110,109,113,.9);
+}
+#gjdjt_s{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-color: rgba(37,34,33,.9);
+    bottom:-120px;
+    left:-20px;
+    display: none;
+}
+#gjdjt_s_i0{
+    width: 40px;
+    height: 40px;
+    line-height:40px;
+    text-align:center;
+    float: left;
+}
+#gjdjt_s_i0:hover{
+    background-color: rgba(110,109,113,.9);
+}
+/*充电*/
+#gjdcd{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size:18px;
+}
+#gjdcd:hover{
+    background-color: rgba(110,109,113,.9);
+}
+/*喇叭*/
+#gjdyl{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size:16px;
+    font-weight:900;
+}
+#gjdyl:hover{
+    background-color: rgba(110,109,113,.9);
+}
+/*电脑*/
+#gjdwang{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size:14px;
+}
+#gjdwang:hover{
+    background-color: rgba(110,109,113,.9);
+}
+
+/*中的设置*/
+#gjdzhong{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size:14px;
+}
+#gjdzhong:hover{
+    background-color: rgba(110,109,113,.9);
+}
+/*时间信息*/
+#gjdtime{
+    width: 60px;
+    height: 40px;
+    padding-top:7px;
+    line-height:15px;
+    text-align: center;
+}
+#gjdtime:hover{
+    background-color: rgba(110,109,113,.9);
+}
+/*信息菜单创建盒子*/
+#czmboxBox{
+    width: 380px;
+    height: 769px;
+    /*overflow: auto;*/
+    text-align: center;
+    border:1px solid transparent;
+    background-color: rgba(37,34,33,.9);
+    position: absolute;
+    font-size:25px;
+    bottom:0px;
+    right:-380px;
+    z-index: 2;
+    display: none;
+}
+#czmboxBox span{
+    display: inline-block;
+    margin-top:300px;
+}
+
+
+
+
+
+
+
+
